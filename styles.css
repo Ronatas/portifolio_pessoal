@@ -1,132 +1,463 @@
-/* Estilo geral */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: url('https://wallpapers.com/images/hd/4k-ultra-hd-galaxy-red-clouds-8djutsmv9kwkls6p.jpg') no-repeat center center fixed; 
-    background-size: cover;
-    color: #333;
+:root {
+    --bg-primary: #050816;
+    --bg-secondary: #0a1024;
+    --bg-card: rgba(15, 25, 52, 0.78);
+    --text-primary: #f5f7ff;
+    --text-secondary: #aeb8d0;
+    --neon-blue: #00d9ff;
+    --neon-purple: #8b5cf6;
+    --border-color: rgba(0, 217, 255, 0.2);
+    --shadow-neon: 0 0 35px rgba(0, 217, 255, 0.15);
 }
 
-header {
-    background-color: transparent; 
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(82, 39, 172, 0.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(0, 217, 255, 0.12),
+            transparent 32%
+        ),
+        var(--bg-primary);
+    color: var(--text-primary);
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+.text-secondary {
+    color: var(--text-secondary) !important;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 10px;
+/* Navegação */
+.navbar-futurista {
+    background: rgba(5, 8, 22, 0.78);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.12);
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.navbar-brand {
+    letter-spacing: 0.5px;
 }
 
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.brand-symbol {
+    color: var(--neon-blue);
+    margin-right: 6px;
+    text-shadow: 0 0 14px var(--neon-blue);
 }
 
-footer {
-    background-color: transparent; 
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.nav-link {
+    color: #c8d1e8 !important;
+    transition: 0.3s ease;
 }
 
-/* Estilo da foto */
-.photo-section {
-    text-align: center;
-    margin-top: 20px;
+.nav-link:hover,
+.nav-link.active {
+    color: var(--neon-blue) !important;
 }
 
-.photo-section .photo {
-    width: 100px; 
-    height: 100px;
-    object-fit: cover; 
-    display: inline-block; 
-}
-
-.name {
-    margin-top: 10px;
-    color: white;
-}
-
-/* Estilo do formulário */
-form {
+/* Hero */
+.hero-section {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    padding: 150px 0 90px;
+    position: relative;
+    overflow: hidden;
 }
 
-form label {
-    margin-top: 10px;
-    font-size: 16px;
+.hero-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -180px;
+    top: 100px;
+    background: rgba(0, 217, 255, 0.1);
+    filter: blur(100px);
+    border-radius: 50%;
+    pointer-events: none;
 }
 
-form input, form textarea {
+.hero-kicker,
+.section-kicker {
+    color: var(--neon-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    max-width: 720px;
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.08rem;
+}
+
+.hero-title span {
+    color: var(--neon-blue);
+    text-shadow: 0 0 25px rgba(0, 217, 255, 0.5);
+}
+
+.hero-description {
+    max-width: 650px;
+    color: var(--text-secondary);
+    font-size: 1.12rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 8px 15px;
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    border-radius: 50px;
+    background: rgba(0, 217, 255, 0.08);
+    color: #d4faff;
+    font-size: 0.86rem;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #39ff88;
+    box-shadow: 0 0 12px #39ff88;
+}
+
+/* Botões */
+.btn-neon {
+    background: var(--neon-blue);
+    border: 1px solid var(--neon-blue);
+    color: #031017;
+    font-weight: 700;
+    box-shadow: 0 0 24px rgba(0, 217, 255, 0.22);
+    transition: 0.3s ease;
+}
+
+.btn-neon:hover {
+    background: #7ceeff;
+    border-color: #7ceeff;
+    color: #031017;
+    transform: translateY(-3px);
+    box-shadow: 0 0 35px rgba(0, 217, 255, 0.42);
+}
+
+.btn-outline-info {
+    border-color: var(--neon-blue);
+    color: var(--neon-blue);
+}
+
+.btn-outline-info:hover {
+    background: var(--neon-blue);
+    border-color: var(--neon-blue);
+    color: #031017;
+}
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-links a {
+    color: var(--text-secondary);
+    transition: 0.3s ease;
+}
+
+.hero-links a:hover {
+    color: var(--neon-blue);
+}
+
+.hero-links i {
+    margin-right: 6px;
+}
+
+/* Card do perfil */
+.profile-card {
+    position: relative;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    background: linear-gradient(
+        145deg,
+        rgba(0, 217, 255, 0.13),
+        rgba(139, 92, 246, 0.13)
+    );
+    box-shadow: var(--shadow-neon);
+    overflow: hidden;
+}
+
+.profile-glow {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -50px;
+    top: -50px;
+    background: var(--neon-blue);
+    filter: blur(85px);
+    opacity: 0.45;
+}
+
+.profile-image {
+    position: relative;
     width: 100%;
-    max-width: 400px;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+    filter: saturate(0.9) contrast(1.05);
 }
 
-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+.profile-card-content {
+    position: relative;
+    padding: 20px 10px 8px;
 }
 
-form button:hover {
-    background-color: #555;
-}
-
-/* Estilização para a lista de links no portfólio */
-ul.portfolio-links {
-    list-style-type: none;
-    padding: 0;
+.profile-card-content h2 {
     margin: 0;
+    font-size: 1.6rem;
 }
 
-ul.portfolio-links li {
-    margin: 10px 0;
+/* Seções */
+.section-space {
+    padding: 100px 0;
 }
 
-ul.portfolio-links a {
-    text-decoration: none;
-    color: black; 
-    font-weight:550; 
+.section-dark {
+    background: rgba(10, 16, 36, 0.78);
+    border-top: 1px solid rgba(0, 217, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 217, 255, 0.08);
 }
 
-ul.portfolio-links a:hover {
-    text-decoration: underline; 
+.section-heading {
+    max-width: 700px;
+}
+
+.section-heading h2,
+.contact-cta h2 {
+    margin: 10px 0 18px;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+}
+
+.section-heading p:not(.section-kicker) {
+    color: var(--text-secondary);
+}
+
+/* Cards de competências */
+.info-card {
+    height: 100%;
+    padding: 28px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: var(--bg-card);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 217, 255, 0.55);
+    box-shadow: var(--shadow-neon);
+}
+
+.info-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.15rem;
+}
+
+.info-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.icon-box {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    place-items: center;
+    border: 1px solid rgba(0, 217, 255, 0.35);
+    border-radius: 15px;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--neon-blue);
+    font-size: 1.55rem;
+}
+
+/* Linha do tempo */
+.timeline {
+    border-left: 1px solid rgba(0, 217, 255, 0.3);
+    padding-left: 28px;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -53px;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid var(--neon-blue);
+    border-radius: 50%;
+    background: var(--bg-secondary);
+    color: var(--neon-blue);
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.2);
+}
+
+.timeline-item h3 {
+    margin: 0 0 5px;
+    font-size: 1.15rem;
+}
+
+.timeline-item p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* Carrossel */
+.carousel-futurista {
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
+    box-shadow: var(--shadow-neon);
+}
+
+.carousel-futurista .carousel-item {
+    height: 450px;
+    background: #080d20;
+}
+
+.carousel-futurista .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.62;
+}
+
+.carousel-caption {
+    right: 8%;
+    bottom: 12%;
+    left: 8%;
+    padding: 25px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 16px;
+    background: rgba(5, 8, 22, 0.78);
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    color: var(--neon-blue);
+}
+
+/* Chamada de contato */
+.contact-cta {
+    padding: 30px 0 100px;
+}
+
+.cta-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 42px;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(0, 217, 255, 0.1),
+            rgba(139, 92, 246, 0.1)
+        ),
+        var(--bg-card);
+}
+
+/* Rodapé */
+.footer-futurista {
+    padding: 30px 0;
+    border-top: 1px solid rgba(0, 217, 255, 0.12);
+    background: #03050e;
+    color: var(--text-secondary);
+}
+
+.footer-futurista a {
+    color: var(--neon-blue);
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 130px;
+    }
+
+    .profile-card {
+        max-width: 330px;
+    }
+
+    .profile-image {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: auto;
+        padding: 130px 0 70px;
+    }
+
+    .section-space {
+        padding: 70px 0;
+    }
+
+    .hero-title {
+        font-size: 3.1rem;
+    }
+
+    .carousel-futurista .carousel-item {
+        height: 360px;
+    }
+
+    .carousel-caption {
+        right: 5%;
+        bottom: 8%;
+        left: 5%;
+        padding: 18px;
+    }
+
+    .cta-box {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 28px;
+    }
 }
