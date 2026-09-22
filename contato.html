@@ -3,45 +3,311 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+
+    <meta
+        name="description"
+        content="Entre em contato com Ronatas Fernando Gomes Diniz."
+    >
+
+    <title>Contato | Ronatas Diniz</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="photo-section">
-                <img src="./imgs/perfil-ronatas.jpg" alt="Minha Foto" class="photo">
-                <h1 class="name">Ronatas Fernando Gomes Diniz</h1>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Sobre Mim</a></li>
-                    <li><a href="formacao.html">Formação</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <h1>Contato</h1>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-            <br>
-            <button type="submit">Enviar</button>
-        </form>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-futurista">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-symbol">&lt;/&gt;</span>
+                Ronatas Diniz
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Sobre mim</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="formacao.html">Formação</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfólio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="btn btn-outline-info btn-sm px-3"
+                            href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="inner-page">
+
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-kicker">CONTATO</p>
+
+                <h1>
+                    Vamos conversar?
+                </h1>
+
+                <p>
+                    Estou aberto a oportunidades em suporte de TI, infraestrutura,
+                    redes e áreas relacionadas à tecnologia.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container">
+
+                <div class="row g-5 align-items-start">
+
+                    <div class="col-lg-5">
+                        <div class="section-heading">
+                            <p class="section-kicker">FALE COMIGO</p>
+
+                            <h2>
+                                Entre em contato profissionalmente.
+                            </h2>
+
+                            <p>
+                                Você pode me encontrar pelo LinkedIn, GitHub ou
+                                diretamente pelo e-mail.
+                            </p>
+                        </div>
+
+                        <div class="contact-list mt-4">
+
+                            <a href="mailto:ronatas.diniz@gmail.com" class="contact-item">
+                                <span class="contact-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </span>
+
+                                <span>
+                                    <small>E-mail</small>
+                                    ronatas.diniz@gmail.com
+                                </span>
+                            </a>
+
+                            <a href="tel:+5516997279406" class="contact-item">
+                                <span class="contact-icon">
+                                    <i class="bi bi-telephone"></i>
+                                </span>
+
+                                <span>
+                                    <small>Telefone</small>
+                                    (16) 99727-9406
+                                </span>
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-item"
+                            >
+                                <span class="contact-icon">
+                                    <i class="bi bi-linkedin"></i>
+                                </span>
+
+                                <span>
+                                    <small>LinkedIn</small>
+                                    Perfil profissional
+                                </span>
+                            </a>
+
+                            <a
+                                href="https://github.com/Ronatas"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-item"
+                            >
+                                <span class="contact-icon">
+                                    <i class="bi bi-github"></i>
+                                </span>
+
+                                <span>
+                                    <small>GitHub</small>
+                                    Projetos e repositórios
+                                </span>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="contact-form-card">
+
+                            <h2>Envie uma mensagem</h2>
+
+                            <p>
+                                Preencha o formulário. Para que o envio funcione de
+                                verdade, será necessário conectar o formulário a um
+                                serviço de recebimento.
+                            </p>
+
+                            <form
+                                action="https://formsubmit.co/ronatas.diniz@gmail.com"
+                                method="POST"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="_subject"
+                                    value="Nova mensagem pelo portfólio"
+                                >
+
+                                <input
+                                    type="hidden"
+                                    name="_captcha"
+                                    value="false"
+                                >
+
+                                <input
+                                    type="hidden"
+                                    name="_template"
+                                    value="table"
+                                >
+
+                                <div class="row g-3">
+
+                                    <div class="col-md-6">
+                                        <label for="nome" class="form-label">
+                                            Nome
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="nome"
+                                            name="nome"
+                                            class="form-control"
+                                            placeholder="Seu nome"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">
+                                            E-mail
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            class="form-control"
+                                            placeholder="seu@email.com"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="assunto" class="form-label">
+                                            Assunto
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="assunto"
+                                            name="assunto"
+                                            class="form-control"
+                                            placeholder="Assunto da mensagem"
+                                            required
+                                        >
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="mensagem" class="form-label">
+                                            Mensagem
+                                        </label>
+
+                                        <textarea
+                                            id="mensagem"
+                                            name="mensagem"
+                                            class="form-control"
+                                            rows="6"
+                                            placeholder="Escreva sua mensagem..."
+                                            required
+                                        ></textarea>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button
+                                            type="submit"
+                                            class="btn btn-neon"
+                                        >
+                                            Enviar mensagem
+                                            <i class="bi bi-send ms-2"></i>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 <a href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/" target="_blank">Diniz</a></p>
+    <footer class="footer-futurista">
+        <div class="container text-center">
+            <p class="mb-2">© 2026 Ronatas Fernando Gomes Diniz</p>
+
+            <a
+                href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn profissional
+            </a>
+        </div>
     </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
 </body>
 </html>
