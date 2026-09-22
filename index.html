@@ -3,85 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio - Diniz</title>
+
+    <meta
+        name="description"
+        content="Portfólio profissional de Ronatas Fernando Gomes Diniz, Técnico de Suporte de TI, Infraestrutura, Redes e Segurança Eletrônica."
+    >
+
+    <title>Ronatas Diniz | Suporte de TI e Infraestrutura</title>
+
+    <!-- Bootstrap 5.3.8 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Seu CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-futurista">
         <div class="container">
-            <div class="photo-section">
-                <img src="./imgs/perfil-ronatas.jpg" alt="Minha Foto" class="photo">
-                <h1 class="name">Ronatas Fernando Gomes Diniz</h1>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Sobre Mim</a></li>
-                    <li><a href="formacao.html">Formação</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-symbol">&lt;/&gt;</span>
+                Ronatas Diniz
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Sobre mim</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="formacao.html">Formação</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfólio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="btn btn-outline-info btn-sm px-3"
+                            href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Apresentação principal -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+                    <div class="status-badge mb-4">
+                        <span class="status-dot"></span>
+                        Disponível para oportunidades em TI
+                    </div>
+
+                    <p class="hero-kicker">SUPORTE TÉCNICO • INFRAESTRUTURA • REDES</p>
+
+                    <h1 class="hero-title">
+                        Tecnologia,
+                        <span>suporte</span>
+                        e soluções eficientes.
+                    </h1>
+
+                    <p class="hero-description">
+                        Sou Ronatas Fernando Gomes Diniz, profissional de Tecnologia da
+                        Informação com experiência em suporte técnico, infraestrutura,
+                        redes, troubleshooting e segurança eletrônica.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="portfolio.html" class="btn btn-neon">
+                            <i class="bi bi-grid-3x3-gap me-2"></i>
+                            Ver meu portfólio
+                        </a>
+
+                        <a href="contato.html" class="btn btn-outline-light">
+                            <i class="bi bi-chat-dots me-2"></i>
+                            Entrar em contato
+                        </a>
+                    </div>
+
+                    <div class="hero-links mt-4">
+                        <a
+                            href="https://github.com/Ronatas"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                            LinkedIn
+                        </a>
+
+                        <a href="mailto:ronatas.diniz@gmail.com">
+                            <i class="bi bi-envelope"></i>
+                            E-mail
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="profile-card">
+                        <div class="profile-glow"></div>
+
+                        <img
+                            src="./imgs/perfil-ronatas.jpg"
+                            alt="Foto de Ronatas Fernando Gomes Diniz"
+                            class="profile-image"
+                        >
+
+                        <div class="profile-card-content">
+                            <p class="mb-1 text-info">Profissional de TI</p>
+                            <h2>Ronatas Diniz</h2>
+                            <p class="mb-0">
+                                Suporte técnico, redes e infraestrutura.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
 
+    <!-- Sobre mim -->
     <main>
-        <h2>Biografia</h2>
-        <p>
 
-            Sou Ronatas Diniz, um Técnico em Informática com uma sólida experiência em suporte técnico e<br>
-             manutenção de equipamentos eletrônicos. Ao longo da minha carreira, desenvolvi habilidades abrangentes em<br>
-              diversas áreas da tecnologia, com um foco particular em redes e sistemas de segurança.<br><br>
-            
-            Durante 3 anos, trabalhei com instalação de sistemas de segurança eletrônica.<br>
-            Nesse período, adquiri uma ampla experiência com redes e estruturas de rede, além de configurar e<br>
-            implantar sistemas em rede. Minhas responsabilidades incluíam a instalação de câmeras de segurança <br>
-            (CCTV), sistemas de controle de acesso, alarmes monitorados remotamente e sistemas de portaria remota.<br>
-             A configuração de dispositivos de segurança, a integração de sistemas em rede e a manutenção <br>
-             preventiva e corretiva desses sistemas foram algumas das minhas tarefas diárias.<br><br>
-            
-            Atualmente, atuo no Hospital Universitário de São Carlos, SP, onde meu foco está no atendimento de TIC<br>
-            em nível 2 e suporte ao usuário. Minha experiência inclui a resolução de problemas técnicos complexos e a <br>
-            manutenção de equipamentos essenciais para o funcionamento eficiente da instituição.<br><br>
-            
-            Estou constantemente buscando expandir meus conhecimentos e habilidades para enfrentar novos<br>
-            desafios e contribuir para o avanço da tecnologia.<br><br>
+        <section class="section-space" id="sobre">
+            <div class="container">
 
-            
-            <h2>Experiência Profissional</h2>
-            
-            <strong>Ilha Service Tecnologia | São Carlos, SP |  Atualmente</strong><br>
-                    Técnico em Informática <br><br>
-            
-            <strong>CLARO/NET | São Carlos</strong><br>
-                    Técnico em Telecomunicações<br><br>
-            
-            <strong>Empresa JOB | São Carlos</strong><br>
-                    Técnico Instalador de Sistemas de Segurança Eletrônica<br><br>
-            
-            <strong>Empresa Phoenix | São Carlos</strong><br>
-                     Técnico Instalador de Sistemas de Segurança Eletrônica<br><br>
-            
-            <strong>Farmácia Nossa Senhora do Rosário | São Carlos</strong><br>
-                    Analista de Sistemas<br><br>
-            
-            <h2>Habilidades</h2>
-            Suporte ao Cliente<br>
-            Manutenção e Correção de Equipamentos Eletrônicos<br>
-            Montagem e Manutenção de Microcomputadores e Notebooks<br>
-            Redes de Dados (Cabeamento, Switches, Roteadores, Wi-Fi)<br>
-            Segurança da Informação (Conhecimentos Básicos)<br>
-            Gestão de Ativos (Entrada e Saída de Equipamentos)<br>
-            Microsoft System Center, Políticas de Grupo (GPO), Unidade Organizacional (Controles de Domínio)<br>
-            Cabeamento Estruturado (Dados/Voz)<br><br>
-            
-        
-            
-    
-            </p>
+                <div class="section-heading">
+                    <p class="section-kicker">SOBRE MIM</p>
+
+                    <h2>
+                        Experiência prática para resolver problemas de tecnologia
+                    </h2>
+
+                    <p>
+                        Minha trajetória profissional combina atendimento ao usuário,
+                        manutenção de equipamentos, redes de dados, infraestrutura de TI
+                        e sistemas de segurança eletrônica.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-4">
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <div class="icon-box">
+                                <i class="bi bi-headset"></i>
+                            </div>
+
+                            <h3>Suporte técnico</h3>
+
+                            <p>
+                                Atendimento ao usuário, diagnóstico de falhas,
+                                troubleshooting e suporte N1/N2.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <div class="icon-box">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+
+                            <h3>Redes</h3>
+
+                            <p>
+                                Conhecimentos em cabeamento, switches, roteadores,
+                                Wi-Fi e infraestrutura de rede.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <div class="icon-box">
+                                <i class="bi bi-pc-display"></i>
+                            </div>
+
+                            <h3>Hardware</h3>
+
+                            <p>
+                                Montagem, manutenção preventiva e corretiva de
+                                computadores, notebooks e periféricos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info-card">
+                            <div class="icon-box">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+
+                            <h3>Segurança</h3>
+
+                            <p>
+                                Experiência com CFTV, alarmes, controle de acesso e
+                                portaria remota.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência resumida -->
+        <section class="section-space section-dark" id="experiencia">
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5">
+                        <p class="section-kicker">EXPERIÊNCIA</p>
+
+                        <h2>
+                            Uma visão prática de tecnologia e atendimento
+                        </h2>
+
+                        <p class="text-secondary">
+                            Ao longo da minha carreira, atuei em ambientes corporativos,
+                            hospitalares, residenciais e técnicos, desenvolvendo
+                            capacidade para identificar problemas e buscar soluções
+                            eficientes.
+                        </p>
+
+                        <a href="formacao.html" class="btn btn-outline-info mt-3">
+                            Conheça minha formação
+                            <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <span class="timeline-icon">
+                                    <i class="bi bi-tools"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Suporte e manutenção</h3>
+                                    <p>
+                                        Manutenção de computadores, notebooks,
+                                        impressoras, periféricos e equipamentos de TI.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-icon">
+                                    <i class="bi bi-hospital"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Ambiente hospitalar</h3>
+                                    <p>
+                                        Atuação com suporte técnico N2 e sustentação
+                                        do parque tecnológico.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="timeline-icon">
+                                    <i class="bi bi-camera-video"></i>
+                                </span>
+
+                                <div>
+                                    <h3>Segurança eletrônica</h3>
+                                    <p>
+                                        Instalação e configuração de CFTV, alarmes,
+                                        controle de acesso e portaria remota.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrossel de serviços -->
+        <section class="section-space" id="servicos">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-kicker">SERVIÇOS REALIZADOS</p>
+
+                    <h2>
+                        Projetos e atividades em destaque
+                    </h2>
+
+                    <p>
+                        Substitua as imagens abaixo por fotos reais dos serviços,
+                        instalações e projetos que você realizou.
+                    </p>
+                </div>
+
+                <div
+                    id="carouselServicos"
+                    class="carousel slide carousel-futurista mt-5"
+                    data-bs-ride="carousel"
+                >
+
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carouselServicos"
+                            data-bs-slide-to="0"
+                            class="active"
+                            aria-current="true"
+                            aria-label="Slide 1"
+                        ></button>
+
+                        <button
+                            type="button"
+                            data-bs-target="#carouselServicos"
+                            data-bs-slide-to="1"
+                            aria-label="Slide 2"
+                        ></button>
+
+                        <button
+                            type="button"
+                            data-bs-target="#carouselServicos"
+                            data-bs-slide-to="2"
+                            aria-label="Slide 3"
+                        ></button>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <img
+                                src="./imgs/servico-rede.jpg"
+                                class="d-block w-100"
+                                alt="Instalação de infraestrutura de rede"
+                            >
+
+                            <div class="carousel-caption">
+                                <h3>Infraestrutura de redes</h3>
+                                <p>
+                                    Cabeamento, organização e configuração de
+                                    equipamentos de rede.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img
+                                src="./imgs/servico-cftv.jpg"
+                                class="d-block w-100"
+                                alt="Instalação de sistema de CFTV"
+                            >
+
+                            <div class="carousel-caption">
+                                <h3>Segurança eletrônica</h3>
+                                <p>
+                                    Instalação e configuração de câmeras, alarmes
+                                    e controle de acesso.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img
+                                src="./imgs/servico-suporte.jpg"
+                                class="d-block w-100"
+                                alt="Atendimento e suporte técnico"
+                            >
+
+                            <div class="carousel-caption">
+                                <h3>Suporte técnico</h3>
+                                <p>
+                                    Manutenção, diagnóstico e atendimento ao usuário.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselServicos"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselServicos"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Chamada para contato -->
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <div>
+                        <p class="section-kicker mb-2">VAMOS CONVERSAR</p>
+
+                        <h2>
+                            Procurando um profissional de suporte em TI?
+                        </h2>
+
+                        <p class="mb-0 text-secondary">
+                            Entre em contato para conhecer melhor meu trabalho,
+                            experiências e projetos.
+                        </p>
+                    </div>
+
+                    <a href="contato.html" class="btn btn-neon">
+                        Falar comigo
+                        <i class="bi bi-arrow-up-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2024 <a href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/" target="_blank">Diniz</a></p>
+    <!-- Rodapé -->
+    <footer class="footer-futurista">
+        <div class="container text-center">
+            <p class="mb-2">
+                © 2026 Ronatas Fernando Gomes Diniz
+            </p>
+
+            <a
+                href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn profissional
+            </a>
+        </div>
     </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
 </body>
 </html>
