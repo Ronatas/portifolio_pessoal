@@ -3,57 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+
+    <meta
+        name="description"
+        content="Portfólio de projetos e experiências técnicas de Ronatas Diniz."
+    >
+
+    <title>Portfólio | Ronatas Diniz</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-futurista">
         <div class="container">
-            <div class="photo-section">
-                <img src="./imgs/perfil-ronatas.jpg" alt="Minha Foto" class="photo">
-                <h1 class="name">Ronatas Fernando Gomes Diniz</h1>
-            </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">Sobre Mim</a></li>
-                    <li><a href="formacao.html">Formação</a></li>
-                    <li><a href="portfolio.html">Portfólio</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-symbol">&lt;/&gt;</span>
+                Ronatas Diniz
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Sobre mim</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="formacao.html">Formação</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">Portfólio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a
+                            class="btn btn-outline-info btn-sm px-3"
+                            href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <h1>Portfólio</h1>
-        <p><strong>Aqui estão alguns dos meus trabalhos e contatos:</strong></p>
-        <ul class="portfolio-links">
-            <li>
-                <a href="https://github.com/Ronatas" target="_blank">Meu GitHub</a>
-                - Confira todos os meus projetos e repositórios de código no GitHub, onde compartilho minhas contribuições e trabalho em andamento.
-            </li>
-            <li>
-                <a href="https://github.com/Ronatas/Pokedex" target="_blank">Site Pizzaria</a>
-                - Veja o projeto do site para pizzaria, que demonstra minhas habilidades em desenvolvimento web e design.
-            </li>
-            <li>
-                <a href="https://github.com/Ronatas/pizzaria-angular-dubai" target="_blank">Pokedex</a>
-                - Explore o projeto Pokedex, um exemplo de aplicação desenvolvida com Angular, mostrando minha experiência com frameworks modernos.
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/" target="_blank">Meu LinkedIn</a>
-                - Conecte-se comigo no LinkedIn para ver meu perfil profissional e obter mais informações sobre minha experiência e formação.
-            </li>
-            <li>
-                <a href="mailto:ronatas.diniz@gmail.com">Meu Email</a>
-                - Entre em contato comigo por e-mail para consultas profissionais ou oportunidades de colaboração.
-            </li>
-        </ul>
+    <main class="inner-page">
+
+        <section class="page-hero">
+            <div class="container">
+                <p class="section-kicker">PORTFÓLIO</p>
+
+                <h1>
+                    Projetos, tecnologia e prática.
+                </h1>
+
+                <p>
+                    Confira alguns projetos de desenvolvimento e experiências
+                    relacionadas à tecnologia.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-icon">
+                                <i class="bi bi-controller"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">Desenvolvimento web</span>
+
+                                <h2>Pokédex</h2>
+
+                                <p>
+                                    Aplicação web desenvolvida com Angular para
+                                    consulta e apresentação de informações de Pokémon.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas/Pokedex"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Ver projeto
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-icon">
+                                <i class="bi bi-shop"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">Desenvolvimento web</span>
+
+                                <h2>Pizzaria Dubai</h2>
+
+                                <p>
+                                    Projeto de página web para pizzaria, com foco em
+                                    apresentação visual, organização de conteúdo e
+                                    experiência do usuário.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas/pizzaria-angular-dubai"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Ver projeto
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+                            <div class="project-icon">
+                                <i class="bi bi-github"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">Código e projetos</span>
+
+                                <h2>GitHub</h2>
+
+                                <p>
+                                    Acesse meus repositórios, estudos, projetos em
+                                    andamento e experimentos de desenvolvimento.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Acessar GitHub
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+
+                <div class="section-heading mt-5">
+                    <p class="section-kicker">EXPERIÊNCIAS TÉCNICAS</p>
+
+                    <h2>
+                        Áreas em que já atuei
+                    </h2>
+                </div>
+
+                <div class="row g-4 mt-2">
+
+                    <div class="col-md-6">
+                        <div class="experience-box">
+                            <i class="bi bi-headset"></i>
+
+                            <div>
+                                <h3>Suporte de TI</h3>
+                                <p>
+                                    Atendimento ao usuário, diagnóstico de problemas,
+                                    manutenção de equipamentos e suporte N1/N2.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="experience-box">
+                            <i class="bi bi-diagram-3"></i>
+
+                            <div>
+                                <h3>Redes e infraestrutura</h3>
+                                <p>
+                                    Cabeamento estruturado, redes de dados, switches,
+                                    roteadores e Wi-Fi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="experience-box">
+                            <i class="bi bi-camera-video"></i>
+
+                            <div>
+                                <h3>Segurança eletrônica</h3>
+                                <p>
+                                    CFTV, controle de acesso, alarmes e sistemas de
+                                    portaria remota.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="experience-box">
+                            <i class="bi bi-pc-display"></i>
+
+                            <div>
+                                <h3>Hardware e manutenção</h3>
+                                <p>
+                                    Montagem, configuração e manutenção preventiva e
+                                    corretiva de computadores e periféricos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
-    
 
-    <footer>
-        <p>&copy; 2024 <a href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/" target="_blank">Diniz</a></p>
+    <footer class="footer-futurista">
+        <div class="container text-center">
+            <p class="mb-2">© 2026 Ronatas Fernando Gomes Diniz</p>
+
+            <a
+                href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn profissional
+            </a>
+        </div>
     </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
 </body>
 </html>
