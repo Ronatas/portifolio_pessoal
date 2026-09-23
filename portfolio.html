@@ -1,274 +1,783 @@
-/* Destaques profissionais */
-.highlight-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    height: 100%;
-    padding: 28px;
-    border: 1px solid rgba(0, 217, 255, 0.2);
-    border-radius: 20px;
-    background: var(--bg-card);
-    transition: 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.highlight-card:hover {
-    transform: translateY(-6px);
-    border-color: var(--neon-blue);
-    box-shadow: var(--shadow-neon);
-}
+    <meta
+        name="description"
+        content="Portfólio profissional de Ronatas Diniz com experiência em suporte, GLPI, ITIL, infraestrutura, redes e desenvolvimento."
+    >
 
-.highlight-icon {
-    display: grid;
-    flex: 0 0 58px;
-    width: 58px;
-    height: 58px;
-    place-items: center;
-    border: 1px solid rgba(0, 217, 255, 0.3);
-    border-radius: 16px;
-    background: rgba(0, 217, 255, 0.1);
-    color: var(--neon-blue);
-    font-size: 1.6rem;
-}
+    <title>Portfólio | Ronatas Diniz</title>
 
-.highlight-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.15rem;
-}
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-.highlight-card p {
-    margin: 0;
-    color: var(--text-secondary);
-}
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-/* Cards do processo GLPI */
-.process-card {
-    position: relative;
-    height: 100%;
-    padding: 28px;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 18px;
-    background: rgba(15, 25, 52, 0.68);
-    transition: 0.3s ease;
-}
+<body>
 
-.process-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(0, 217, 255, 0.55);
-    box-shadow: var(--shadow-neon);
-}
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-futurista">
+        <div class="container">
 
-.process-number {
-    position: absolute;
-    top: 18px;
-    right: 22px;
-    color: rgba(0, 217, 255, 0.35);
-    font-size: 1.5rem;
-    font-weight: 800;
-}
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="brand-symbol">&lt;/&gt;</span>
+                Ronatas Diniz
+            </a>
 
-.process-card > i {
-    color: var(--neon-blue);
-    font-size: 2rem;
-}
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal"
+                aria-expanded="false"
+                aria-label="Abrir menu"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-.process-card h3 {
-    margin: 20px 0 10px;
-    font-size: 1.15rem;
-}
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
 
-.process-card p {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.92rem;
-}
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Sobre mim
+                        </a>
+                    </li>
 
-/* Tags do GLPI */
-.tool-card-highlight {
-    border-color: rgba(255, 202, 92, 0.35);
-}
+                    <li class="nav-item">
+                        <a class="nav-link" href="formacao.html">
+                            Formação
+                        </a>
+                    </li>
 
-.tool-card-highlight:hover {
-    border-color: rgba(255, 202, 92, 0.85);
-    box-shadow: 0 0 35px rgba(255, 202, 92, 0.16);
-}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">
+                            Portfólio
+                        </a>
+                    </li>
 
-.tool-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 14px;
-}
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">
+                            Contato
+                        </a>
+                    </li>
 
-.tool-tags span {
-    padding: 4px 8px;
-    border: 1px solid rgba(255, 202, 92, 0.3);
-    border-radius: 50px;
-    color: #ffe29a;
-    font-size: 0.7rem;
-}
+                    <li class="nav-item">
+                        <a
+                            class="btn btn-outline-info btn-sm px-3"
+                            href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LinkedIn
+                        </a>
+                    </li>
 
-/* Ícone MikroTik */
-.mikrotik-icon {
-    color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.1);
-}
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-/* Bloco visual da rede */
-.network-card {
-    overflow: hidden;
-    border: 1px solid rgba(0, 217, 255, 0.25);
-    border-radius: 20px;
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(0, 217, 255, 0.13),
-            transparent 45%
-        ),
-        var(--bg-card);
-    box-shadow: var(--shadow-neon);
-}
+    <main class="inner-page">
 
-.network-card-header {
-    padding: 18px 24px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    color: #dffaff;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-}
+        <section class="page-hero">
+            <div class="container">
 
-.network-status {
-    display: inline-block;
-    width: 9px;
-    height: 9px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background: #39ff88;
-    box-shadow: 0 0 12px #39ff88;
-}
+                <p class="section-kicker">
+                    PORTFÓLIO PROFISSIONAL
+                </p>
 
-.network-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    min-height: 245px;
-    padding: 35px 20px;
-}
+                <h1>
+                    Tecnologia, suporte e soluções.
+                </h1>
 
-.network-node {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    color: #dce7ff;
-    font-size: 0.83rem;
-    text-align: center;
-}
+                <p>
+                    Experiência prática em suporte técnico, gestão de serviços,
+                    infraestrutura, redes, segurança eletrônica e desenvolvimento.
+                </p>
 
-.network-node i {
-    display: grid;
-    width: 68px;
-    height: 68px;
-    place-items: center;
-    border: 1px solid rgba(0, 217, 255, 0.45);
-    border-radius: 18px;
-    background: rgba(0, 217, 255, 0.12);
-    color: var(--neon-blue);
-    font-size: 1.8rem;
-}
+            </div>
+        </section>
 
-.router-node i {
-    border-color: rgba(139, 92, 246, 0.65);
-    background: rgba(139, 92, 246, 0.16);
-    color: #b9a5ff;
-}
+        <section class="section-space">
+            <div class="container">
 
-.network-line {
-    width: 55px;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        var(--neon-blue),
-        var(--neon-purple)
-    );
-    box-shadow: 0 0 12px var(--neon-blue);
-}
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        PRINCIPAL EXPERIÊNCIA
+                    </p>
 
-.network-card-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 18px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-}
+                    <h2>
+                        Fundação e estruturação do setor de TI
+                    </h2>
 
-.network-card-footer i {
-    color: #39ff88;
-}
+                    <p>
+                        Como Coordenador de TI no Grupo Phoenix, fundei e estruturei
+                        o setor de Tecnologia da Informação, organizando processos,
+                        atendimento, ativos e infraestrutura tecnológica.
+                    </p>
+                </div>
 
-.network-details {
-    display: grid;
-    gap: 18px;
-}
+                <div class="row g-4 mt-3">
 
-.detail-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    background: rgba(15, 25, 52, 0.62);
-}
+                    <div class="col-md-6">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="bi bi-building-gear"></i>
+                            </div>
 
-.detail-item > i {
-    color: var(--neon-blue);
-    font-size: 1.6rem;
-}
+                            <div>
+                                <h3>Estruturação do setor de TI</h3>
 
-.detail-item h3 {
-    margin: 0 0 8px;
-    font-size: 1.05rem;
-}
+                                <p>
+                                    Fundação e organização do setor de Tecnologia
+                                    da Informação do Grupo Phoenix, estabelecendo
+                                    processos, rotinas e padrões de atendimento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-.detail-item p {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-}
+                    <div class="col-md-6">
+                        <div class="highlight-card">
+                            <div class="highlight-icon">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
 
-@media (max-width: 767px) {
-    .highlight-card {
-        flex-direction: column;
-    }
+                            <div>
+                                <h3>Organização de processos</h3>
 
-    .network-visual {
-        gap: 8px;
-        padding-right: 8px;
-        padding-left: 8px;
-    }
+                                <p>
+                                    Estruturação das atividades de suporte técnico,
+                                    gestão de chamados, acompanhamento de demandas
+                                    e organização da operação de TI.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-    .network-line {
-        width: 28px;
-    }
+                </div>
 
-    .network-node i {
-        width: 52px;
-        height: 52px;
-        font-size: 1.4rem;
-    }
+            </div>
+        </section>
 
-    .network-card-footer {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
-    }
-}
+        <section class="section-space section-dark">
+            <div class="container">
 
-css
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        GLPI E ITIL
+                    </p>
+
+                    <h2>
+                        Implantação do gerenciamento de serviços de TI
+                    </h2>
+
+                    <p>
+                        Implantação e estruturação do GLPI no Grupo Phoenix,
+                        utilizando boas práticas de gestão de serviços e organização
+                        dos processos de atendimento.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-3">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">01</div>
+
+                            <i class="bi bi-diagram-3"></i>
+
+                            <h3>Árvore de entidades</h3>
+
+                            <p>
+                                Estruturação da árvore de entidades para organizar
+                                empresas, clientes, setores e ambientes atendidos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">02</div>
+
+                            <i class="bi bi-gear-wide-connected"></i>
+
+                            <h3>Regras de negócio</h3>
+
+                            <p>
+                                Configuração de regras de negócio para padronizar
+                                o direcionamento e o tratamento dos chamados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">03</div>
+
+                            <i class="bi bi-ticket-detailed"></i>
+
+                            <h3>Fluxo de chamados</h3>
+
+                            <p>
+                                Organização do fluxo de atendimento com base na
+                                metodologia ITIL e em boas práticas de Service Desk.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">04</div>
+
+                            <i class="bi bi-boxes"></i>
+
+                            <h3>Inventário integrado</h3>
+
+                            <p>
+                                Utilização do GLPI para gerenciamento dos chamados
+                                e do parque tecnológico com inventário integrado.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">05</div>
+
+                            <i class="bi bi-file-earmark-text"></i>
+
+                            <h3>Documentação dos ativos</h3>
+
+                            <p>
+                                Documentação do parque tecnológico, permitindo
+                                melhor controle, rastreabilidade e organização
+                                dos equipamentos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="process-card">
+                            <div class="process-number">06</div>
+
+                            <i class="bi bi-bar-chart-line"></i>
+
+                            <h3>Controle operacional</h3>
+
+                            <p>
+                                Maior visibilidade das demandas, dos ativos e dos
+                                atendimentos realizados pela equipe técnica.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        INFRAESTRUTURA DE CLIENTES
+                    </p>
+
+                    <h2>
+                        Implantação do MikroTik em clientes de portaria remota
+                    </h2>
+
+                    <p>
+                        Participação na implantação do MikroTik em todos os clientes
+                        de portaria remota, fortalecendo a infraestrutura e
+                        assegurando o serviço de monitoramento dos ativos.
+                    </p>
+                </div>
+
+                <div class="row g-4 mt-3">
+
+                    <div class="col-lg-7">
+                        <div class="network-card">
+
+                            <div class="network-card-header">
+                                <span class="network-status"></span>
+                                Infraestrutura monitorada
+                            </div>
+
+                            <div class="network-visual">
+                                <div class="network-node">
+                                    <i class="bi bi-building"></i>
+                                    <span>Cliente</span>
+                                </div>
+
+                                <div class="network-line"></div>
+
+                                <div class="network-node router-node">
+                                    <i class="bi bi-router"></i>
+                                    <span>MikroTik</span>
+                                </div>
+
+                                <div class="network-line"></div>
+
+                                <div class="network-node">
+                                    <i class="bi bi-activity"></i>
+                                    <span>Monitoramento</span>
+                                </div>
+                            </div>
+
+                            <div class="network-card-footer">
+                                <span>
+                                    <i class="bi bi-check-circle me-1"></i>
+                                    Conectividade
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-shield-check me-1"></i>
+                                    Infraestrutura
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-eye me-1"></i>
+                                    Ativos monitorados
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="network-details">
+
+                            <div class="detail-item">
+                                <i class="bi bi-router"></i>
+
+                                <div>
+                                    <h3>Implantação MikroTik</h3>
+
+                                    <p>
+                                        Participação na implantação da solução de
+                                        rede nos clientes de portaria remota.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <i class="bi bi-shield-check"></i>
+
+                                <div>
+                                    <h3>Fortalecimento da infraestrutura</h3>
+
+                                    <p>
+                                        Apoio à melhoria da estabilidade e da
+                                        organização da infraestrutura de rede.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="detail-item">
+                                <i class="bi bi-activity"></i>
+
+                                <div>
+                                    <h3>Monitoramento dos ativos</h3>
+
+                                    <p>
+                                        Estruturação para acompanhar os ativos e
+                                        contribuir para a continuidade do serviço.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-space section-dark">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        FERRAMENTAS PROFISSIONAIS
+                    </p>
+
+                    <h2>
+                        Tecnologias utilizadas no suporte
+                    </h2>
+                </div>
+
+                <div class="row g-4 mt-3">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon teams-icon">
+                                <i class="bi bi-microsoft-teams"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>Microsoft Teams</h3>
+
+                                <span class="tool-time">
+                                    Mais de 4 anos
+                                </span>
+
+                                <p>
+                                    Comunicação corporativa, reuniões, colaboração
+                                    e suporte aos usuários.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon anydesk-icon">
+                                <i class="bi bi-display"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>AnyDesk</h3>
+
+                                <span class="tool-time">
+                                    Mais de 3 anos
+                                </span>
+
+                                <p>
+                                    Acesso remoto, diagnóstico e resolução de
+                                    problemas em computadores.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon teamviewer-icon">
+                                <i class="bi bi-pc-display-horizontal"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>TeamViewer</h3>
+
+                                <span class="tool-time">
+                                    Mais de 3 anos
+                                </span>
+
+                                <p>
+                                    Suporte remoto, manutenção e configuração
+                                    técnica à distância.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon remote-icon">
+                                <i class="bi bi-window-stack"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>Remote Desktop</h3>
+
+                                <span class="tool-time">
+                                    Mais de 4 anos
+                                </span>
+
+                                <p>
+                                    Conexão remota em ambientes Windows e suporte
+                                    a estações corporativas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon active-directory-icon">
+                                <i class="bi bi-diagram-3"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>Active Directory</h3>
+
+                                <span class="tool-time">
+                                    Mais de 2 anos
+                                </span>
+
+                                <p>
+                                    Suporte a usuários, grupos, permissões e
+                                    organização do ambiente corporativo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon microsoft-icon">
+                                <i class="bi bi-microsoft"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>Microsoft 365</h3>
+
+                                <span class="tool-time">
+                                    Mais de 3 anos
+                                </span>
+
+                                <p>
+                                    Suporte a usuários, colaboração e recursos
+                                    do ambiente Microsoft.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card tool-card-highlight">
+                            <div class="tool-icon glpi-icon">
+                                <i class="bi bi-ticket-detailed"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>GLPI e ITIL</h3>
+
+                                <span class="tool-time">
+                                    Implantação e estruturação
+                                </span>
+
+                                <p>
+                                    Implantação do GLPI no Grupo Phoenix para
+                                    gerenciamento de chamados e do parque
+                                    tecnológico com inventário integrado.
+                                </p>
+
+                                <div class="tool-tags">
+                                    <span>Entidades</span>
+                                    <span>Regras de negócio</span>
+                                    <span>ITIL</span>
+                                    <span>Inventário</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="tool-card">
+                            <div class="tool-icon mikrotik-icon">
+                                <i class="bi bi-router"></i>
+                            </div>
+
+                            <div class="tool-content">
+                                <h3>MikroTik</h3>
+
+                                <span class="tool-time">
+                                    Implantação em clientes
+                                </span>
+
+                                <p>
+                                    Participação na implantação do MikroTik em
+                                    clientes de portaria remota, fortalecendo a
+                                    infraestrutura e o monitoramento dos ativos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section-space">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-kicker">
+                        DESENVOLVIMENTO
+                    </p>
+
+                    <h2>
+                        Projetos e estudos
+                    </h2>
+                </div>
+
+                <div class="row g-4 mt-3">
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+
+                            <div class="project-icon">
+                                <i class="bi bi-controller"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">
+                                    Desenvolvimento web
+                                </span>
+
+                                <h2>Pokédex</h2>
+
+                                <p>
+                                    Aplicação web desenvolvida com Angular para
+                                    consulta e apresentação de informações.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas/Pokedex"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Ver projeto
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+
+                            <div class="project-icon">
+                                <i class="bi bi-shop"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">
+                                    Desenvolvimento web
+                                </span>
+
+                                <h2>Pizzaria Dubai</h2>
+
+                                <p>
+                                    Projeto de página web com foco em
+                                    responsividade e experiência do usuário.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas/pizzaria-angular-dubai"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Ver projeto
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <article class="project-card">
+
+                            <div class="project-icon">
+                                <i class="bi bi-github"></i>
+                            </div>
+
+                            <div class="project-content">
+                                <span class="project-type">
+                                    Código e projetos
+                                </span>
+
+                                <h2>GitHub</h2>
+
+                                <p>
+                                    Repositórios, estudos e projetos de
+                                    desenvolvimento.
+                                </p>
+
+                                <a
+                                    href="https://github.com/Ronatas"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="project-link"
+                                >
+                                    Acessar GitHub
+                                    <i class="bi bi-arrow-up-right"></i>
+                                </a>
+                            </div>
+
+                        </article>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+                        <p class="section-kicker mb-2">
+                            OPORTUNIDADES
+                        </p>
+
+                        <h2>
+                            Vamos conversar sobre tecnologia?
+                        </h2>
+
+                        <p class="mb-0 text-secondary">
+                            Estou aberto a oportunidades em suporte técnico,
+                            Service Desk, infraestrutura e desenvolvimento.
+                        </p>
+                    </div>
+
+                    <a href="contato.html" class="btn btn-neon">
+                        Entrar em contato
+                        <i class="bi bi-arrow-up-right ms-2"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-futurista">
+        <div class="container text-center">
+
+            <p class="mb-2">
+                © 2026 Ronatas Fernando Gomes Diniz
+            </p>
+
+            <a
+                href="https://www.linkedin.com/in/ronatas-fernando-diniz-17020514a/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn profissional
+            </a>
+
+        </div>
+    </footer>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+</body>
+</html>
