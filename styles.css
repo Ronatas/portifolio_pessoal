@@ -951,4 +951,276 @@ textarea.form-control {
     }
 }
 
+/* Destaques profissionais */
+.highlight-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    height: 100%;
+    padding: 28px;
+    border: 1px solid rgba(0, 217, 255, 0.2);
+    border-radius: 20px;
+    background: var(--bg-card);
+    transition: 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--neon-blue);
+    box-shadow: var(--shadow-neon);
+}
+
+.highlight-icon {
+    display: grid;
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 1px solid rgba(0, 217, 255, 0.3);
+    border-radius: 16px;
+    background: rgba(0, 217, 255, 0.1);
+    color: var(--neon-blue);
+    font-size: 1.6rem;
+}
+
+.highlight-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+}
+
+.highlight-card p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* Cards do processo GLPI */
+.process-card {
+    position: relative;
+    height: 100%;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 18px;
+    background: rgba(15, 25, 52, 0.68);
+    transition: 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 217, 255, 0.55);
+    box-shadow: var(--shadow-neon);
+}
+
+.process-number {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    color: rgba(0, 217, 255, 0.35);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.process-card > i {
+    color: var(--neon-blue);
+    font-size: 2rem;
+}
+
+.process-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.15rem;
+}
+
+.process-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+/* Tags do GLPI */
+.tool-card-highlight {
+    border-color: rgba(255, 202, 92, 0.35);
+}
+
+.tool-card-highlight:hover {
+    border-color: rgba(255, 202, 92, 0.85);
+    box-shadow: 0 0 35px rgba(255, 202, 92, 0.16);
+}
+
+.tool-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+}
+
+.tool-tags span {
+    padding: 4px 8px;
+    border: 1px solid rgba(255, 202, 92, 0.3);
+    border-radius: 50px;
+    color: #ffe29a;
+    font-size: 0.7rem;
+}
+
+/* Ícone MikroTik */
+.mikrotik-icon {
+    color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+}
+
+/* Bloco visual da rede */
+.network-card {
+    overflow: hidden;
+    border: 1px solid rgba(0, 217, 255, 0.25);
+    border-radius: 20px;
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 217, 255, 0.13),
+            transparent 45%
+        ),
+        var(--bg-card);
+    box-shadow: var(--shadow-neon);
+}
+
+.network-card-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: #dffaff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+}
+
+.network-status {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background: #39ff88;
+    box-shadow: 0 0 12px #39ff88;
+}
+
+.network-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    min-height: 245px;
+    padding: 35px 20px;
+}
+
+.network-node {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #dce7ff;
+    font-size: 0.83rem;
+    text-align: center;
+}
+
+.network-node i {
+    display: grid;
+    width: 68px;
+    height: 68px;
+    place-items: center;
+    border: 1px solid rgba(0, 217, 255, 0.45);
+    border-radius: 18px;
+    background: rgba(0, 217, 255, 0.12);
+    color: var(--neon-blue);
+    font-size: 1.8rem;
+}
+
+.router-node i {
+    border-color: rgba(139, 92, 246, 0.65);
+    background: rgba(139, 92, 246, 0.16);
+    color: #b9a5ff;
+}
+
+.network-line {
+    width: 55px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--neon-blue),
+        var(--neon-purple)
+    );
+    box-shadow: 0 0 12px var(--neon-blue);
+}
+
+.network-card-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.network-card-footer i {
+    color: #39ff88;
+}
+
+.network-details {
+    display: grid;
+    gap: 18px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    background: rgba(15, 25, 52, 0.62);
+}
+
+.detail-item > i {
+    color: var(--neon-blue);
+    font-size: 1.6rem;
+}
+
+.detail-item h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.detail-item p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+    .highlight-card {
+        flex-direction: column;
+    }
+
+    .network-visual {
+        gap: 8px;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .network-line {
+        width: 28px;
+    }
+
+    .network-node i {
+        width: 52px;
+        height: 52px;
+        font-size: 1.4rem;
+    }
+
+    .network-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
 }
